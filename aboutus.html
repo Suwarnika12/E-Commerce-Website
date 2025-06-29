@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Pet Toys Store</title> 
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #0d1b2a;
+        
+        }
+
+        .header 
+        {
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        .header a 
+        {
+            color: #66FCF1;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .header a.logo 
+        {
+            font-size: 25px;
+            font-weight: bold;
+            color:#45A29E;
+        }
+        
+        .header a:hover 
+        {
+            background-color: transparent;
+            color: #45A29E;
+        }
+
+        
+        .header a.active 
+        {
+            color: #C5C6C7;
+        }
+
+        .header-right 
+        {
+            float: right;
+        }
+
+        div.image
+        {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+
+        div img
+        {
+        width: 200px;
+        height: 280px;
+        border: 2px solid #2c3e50;
+        border-radius: 13px;
+        box-shadow: 10px 10px 100px #1b263b;
+        cursor: pointer;
+        margin: 10px;
+        transition: 400ms;
+        }
+
+        div img:hover
+        {
+        transform: scale(1.03);
+        }
+
+        .footer 
+        {
+            position: static;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:#45A29E;
+            color: white;
+            text-align: center;
+        }
+        .footer a{
+            color:#2c3e50;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 35px;
+        }
+
+        .vid
+        {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <div class="header">
+        <a href="index.html" class="logo" float="left">Pet Toys Store</a>
+        <div class="header-right">
+          <a href="index.html">Home</a>
+            <a href="product.php">Toys</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="faq.php">FAQ</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="account.php">Account</a>
+                <a href="cart.php">Cart</a>
+                <a href="history.php">History</a>
+                <a href="tracking.php">Tracking</a>
+                <a href="logout.php">Sign Out</a>
+            <?php else: ?>
+                <a href="register.html">Sign In/Sign Up</a>
+            <?php endif; ?>
+        </div>
+    </div>
+    
+    <!-- About Us Section -->
+    <h1 style="color: #778da9; text-align: center;">About Us</h1> 
+    <p style="color: #e0e1dd; text-align: center; font-size: 25px; padding: 10px; padding-right: 10px;">
+        At <strong>Pet Toys Store</strong>, we believe that every pet deserves love, joy, and a little bit of fun! 
+        Our mission is to provide high-quality, safe, and engaging toys for pets while also making a difference in the lives of stray animals.
+        <br>
+        Our Mission: We're not just a pet toy store - we're a movement for kindness. That's why we created <strong>FurLuv Foundation</strong>, 
+        a cause dedicated to helping stray cats and dogs find food, shelter, and medical care. With every purchase, 
+        <strong>30% of the profits</strong> goes directly to our foundation, supporting animals in need.
+        <br><br>
+        Join us in making tails wag and hearts happy—shop with a purpose today!
+    </p>
+
+    <!-- Video Section -->
+    <h1 style="color: #778da9; text-align: center;">Watch Our Journey</h1><br> 
+
+    <div class="vid">
+        <video style="height: 240px; width: 320px;" controls>
+            <source src="pics/toys/furluv.mp4" type="video/mp4"> <!-- Video source -->
+        </video>
+    </div>
+    
+    <!-- Gallery Section -->
+    <h1 style="color: #778da9; text-align: center;">Gallery</h1> 
+    <div class="image">
+        <img src="pics/furluv/img01.jpg" height="300px" width="250px" alt="Pet 1">
+        <img src="pics/furluv/img02.jpg" height="300px" width="250px" alt="Pet 2">
+        <img src="pics/furluv/img03.jpg" height="300px" width="250px" alt="Pet 3">
+        <img src="pics/furluv/img04.jpg" height="300px" width="250px" alt="Pet 4">
+        <img src="pics/furluv/img05.jpg" height="300px" width="250px" alt="Pet 5">
+    </div>
+        
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+               <p style="color: #2c3e50;">&copy; 2025 Pet Toys Store. All Rights Reserved.</p> <!-- Copyright notice -->
+       </div>
+   </footer>
+         
+</body>
+</html>
